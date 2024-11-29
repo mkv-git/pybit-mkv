@@ -180,6 +180,14 @@ class PositionHTTP(_V5HTTPManager):
             auth=True,
         )
 
+    def add_or_reduce_margin(self, **kwargs):
+        return self._submit_request(
+            method="POST",
+            path=f"{self.endpoint}{Position.ADD_MARGIN}",
+            query=kwargs,
+            auth=True,
+        )
+
     def set_auto_add_margin(self, **kwargs):
         """Turn on/off auto-add-margin for isolated margin position
 
