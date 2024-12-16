@@ -160,7 +160,7 @@ class _V5HTTPManager:
             return payload
         else:
             cast_values()
-            return json.dumps(parameters)
+            return json.dumps(parameters, cls=_helpers.DecimalEncoder)
 
     def _auth(self, payload, recv_window, timestamp):
         """

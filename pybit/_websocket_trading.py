@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 import json
 import uuid
-import decimal
 import logging
 from ._websocket_stream import _WebSocketManager
 from . import _helpers
@@ -12,13 +11,6 @@ logger = logging.getLogger(__name__)
 
 WSS_NAME = "WebSocket Trading"
 TRADE_WSS = "wss://{SUBDOMAIN}.{DOMAIN}.com/v5/trade"
-
-
-class DecimalEncoder(json.JSONEncoder):
-    def default(self, o):
-        if isinstance(o, decimal.Decimal):
-            return str(o)
-        return super().default(o)
 
 
 class _V5TradeWebSocketManager(_WebSocketManager):
@@ -89,5 +81,5 @@ class _V5TradeWebSocketManager(_WebSocketManager):
         if self.referral_id:
             message["header"]["Referer"] = self.referral_id
 
-        self.ws.send(json.dumps(message, cls=DecimalEncoder))
+        self.ws.send(json.dumps(message, cls=_helpers.DecimalEncoder))
         self._set_callback(request_id, callback)

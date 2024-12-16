@@ -1,6 +1,15 @@
-import time
 import re
+import time
+import json
 import copy
+import decimal
+
+
+class DecimalEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, decimal.Decimal):
+            return str(o)
+        return super().default(o)
 
 
 def generate_timestamp():
