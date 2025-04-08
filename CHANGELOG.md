@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [5.10.1] - 2025-04-08
+
+### Fixed
+- HTTP args `retry_codes` and `ignore_codes`
+
+
 ## [5.10.0] - 2025-03-13
 
 ### Added
@@ -19,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deprecated
 - `liquidation_stream` WebSocket topic.
+
 
 ## [5.9.0] - 2025-01-27
 
