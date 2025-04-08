@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 - `liquidation_stream` WebSocket topic.
 
+
 ## [5.9.0] - 2025-01-27
 
 Thanks goes to [Kamsby](https://github.com/Kamsby), [kolya5544](https://github.com/kolya5544), and [LordGhostX](https://github.com/LordGhostX) for contributing to this release.
