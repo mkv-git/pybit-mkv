@@ -200,7 +200,6 @@ class WebSocket(_V5WebSocketManager):
         Required args:
             symbol (string/list): Symbol name(s)
             depth (int): Orderbook depth
-            callback:
 
         Additional information:
             https://bybit-exchange.github.io/docs/v5/websocket/public/orderbook
