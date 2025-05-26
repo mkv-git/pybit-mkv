@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [5.11.0] - 2025-05-26
+
+### Added
+- [Spread Trading](https://bybit-exchange.github.io/docs/v5/spread/market/instrument) HTTP API methods and WebSockets. See the [example file](https://github.com/bybit-exchange/pybit/blob/master/examples/websocket_http_example_spread_trading_quickstart.py) for implementation. 
+
+
 ## [5.10.1] - 2025-04-08
 
 ### Fixed
